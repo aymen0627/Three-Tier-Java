@@ -1,0 +1,126 @@
+<!--
+/* Name: Aymen Hasnain
+ Course: CNT 4714 – Spring 2023 – Project Four
+ Assignment title: A Three-Tier Distributed Web-Based Application
+ Date: April 23, 2023
+*/
+-->
+<web-app>
+
+  <display-name>Project4</display-name>
+  <!-- Automatically takes user to landing login page -->
+    <welcome-file-list>
+        <welcome-file>authentication.html</welcome-file>
+    </welcome-file-list>
+  <!-- WelcomeServlet example -->
+  <servlet>
+    <description>
+      A simple servlet that handles an HTTP get request
+    </description>
+    <servlet-name>alpha</servlet-name>
+    <servlet-class>WelcomeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>alpha</servlet-name>
+    <url-pattern>/welcome</url-pattern>
+  </servlet-mapping>
+
+  <!-- Naming convention causing confusion, just named all the same for simplicity of project -->
+
+  <!-- AuthenticationServlet -->
+  <servlet>
+    <description>
+      Authentication Page
+    </description>
+    <servlet-name>auth</servlet-name>
+    <servlet-class>authenticationServlet</servlet-class>
+    <!-- <servlet-class> project4.authenticationServlet </servlet-class> -->
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>auth</servlet-name>
+    <url-pattern>/authenticationServlet</url-pattern>
+  </servlet-mapping>
+
+  <!-- clientUserServlet -->
+  <servlet>
+    <description>
+      Client User Page
+    </description>
+    <servlet-name>client</servlet-name>
+    <servlet-class>clientUserServlet</servlet-class>
+    <!-- <servlet-class> project4.clientUserServlet </servlet-class> -->
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>client</servlet-name>
+    <url-pattern>/clientUserServlet</url-pattern>
+  </servlet-mapping>
+
+  <!-- rootUser Servlet -->
+  <servlet>
+    <description>
+      Root User Page
+    </description>
+    <servlet-name>root</servlet-name>
+    <servlet-class>rootUserServlet</servlet-class>
+    <!-- <servlet-class> project4.rootUserServlet </servlet-class> -->
+
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>root</servlet-name>
+    <url-pattern>/rootUserServlet</url-pattern>
+  </servlet-mapping>
+
+  <!-- shipmentsServlet for DataEntry -->
+  <servlet>
+    <description>
+      Shipments DB
+    </description>
+    <servlet-name>ship</servlet-name>
+    <servlet-class>shipmentsDBServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ship</servlet-name>
+    <url-pattern>/shipmentsDBServlet</url-pattern>
+  </servlet-mapping>
+
+  <!-- suppliersServlet for DataEntry -->
+  <servlet>
+    <description></description>
+    Suppliers DB
+    <servlet-name>supply</servlet-name>
+    <servlet-class>suppliersDBServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>supply</servlet-name>
+    <url-pattern>/suppliersDBServlet</url-pattern>
+  </servlet-mapping>
+
+  <!-- partsServlet for DataEntry -->
+  <servlet>
+    <description>
+      Parts DB
+    </description>
+    <servlet-name>parts</servlet-name>
+    <servlet-class>partsDBServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>parts</servlet-name>
+    <url-pattern>/partsDBServlet</url-pattern>
+  </servlet-mapping>
+
+  <!-- jobsServlet for DataEntry -->
+  <servlet>
+    <description>
+      Jobs DB
+    </description>
+    <servlet-name>jobs</servlet-name>
+    <servlet-class>jobsDBServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>jobs</servlet-name>
+    <url-pattern>/jobsDBServlet</url-pattern>
+  </servlet-mapping>
+
+  <!--End of web.xml -->
+
+</web-app>

@@ -1,0 +1,131 @@
+<!--
+/* Name: Aymen Hasnain
+Course: CNT 4714 – Spring 2023 – Project Four
+Assignment title: A Three-Tier Distributed Web-Based Application
+Date: April 23, 2023
+*/
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Authentication Required</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: Verdana, Calibri;
+      font-size: 1.2em;
+    }
+
+    h1 {
+      font-weight: bold;
+      font-size: 1.5em;
+      text-align: center;
+      margin-top: 2em;
+    }
+
+    h2 {
+      color: white;
+      font-size: 0.89em;
+      text-align: center;
+    }
+
+    #y {
+      color: #FFD700;
+    }
+
+    #g {
+      color: #008000;
+    }
+
+    #r {
+      color: #FF0000;
+    }
+
+    .container {
+      height: 300px;
+      width: 400px;
+      margin: auto;
+      position: relative;
+      border: 3px solid #808080;
+      border-radius: 10px;
+      padding: 1em;
+      box-shadow: 0 0 10px #808080;
+    }
+
+    input[type=text], input[type=password] {
+      width: 100%;
+      padding: 0.5em;
+      margin: 0.5em 0;
+      border: none;
+      border-radius: 4px;
+      background-color: #ddd;
+    }
+
+    button {
+      background-color: white;
+      color: black;
+      border: none;
+      padding: 10px 20px;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin: 10px 0;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    button:hover {
+      background-color: #002ead;
+      color: white;
+      transition: 0.7s;
+    }
+
+    button:active {
+      background-color: #ffbf00;
+    }
+
+    button[type="submit"] {
+      background-color: purple;
+      color: black;
+      border: none;
+      padding: 10px 20px;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin-top: 20px;
+      cursor: pointer;
+      display: block;
+      margin: 0 auto;
+    }
+
+  </style>
+</head>
+
+<body>
+<h1> <span id="y"> Welcome to the Spring 2023 Project 4 Enterprise Database System</span> <br><span id="g"> A Servlet/JSP-based Multi-tiered Enterprise Application Using A Tomcat Container</span>
+
+</h1>
+<h2> <span id="r">- User Authentication Page -</span>
+
+</h2>
+<form method="get" action="/Project4/authenticationServlet">
+  <div class="container">
+    <div class="center">
+      <label for="username"><b>Username</b></label>
+      <br>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+      <br>
+      <label for="password"><b>Password</b></label>
+      <br>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+      <br>
+      <br>
+      <button type="submit"><span id="y">Click To Login</span></button>
+    </div>
+  </div>
+</form>
+<div class="Hcenter">
+</div>
+</body>
